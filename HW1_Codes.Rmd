@@ -1,0 +1,18 @@
+---
+title: "HW1"
+author: "Mingqian Zhang"
+date: "2024-01-23"
+output: pdf_document
+---
+
+```{r}
+setwd("D:\\Synchronous\\BaiduSyncdisk\\RProjects\\UCD_STA137_HW")
+
+set.seed(17)
+w <- rnorm(500)
+x <- filter(w, filter=c(1,2,1), method="convolution")[2:499]
+acf(x, type="correlation", lag.max=10, plot=TRUE)
+
+
+```
+
